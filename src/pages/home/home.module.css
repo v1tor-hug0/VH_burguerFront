@@ -1,0 +1,198 @@
+.banner {
+    background-color: var(--fundo-claro);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.banner h1 {
+    color: var(--laranja-destaque);
+    font-size: 80px;
+    font-weight: 500;
+    margin-bottom: 2%;
+}
+
+#hamburgueres {
+    width: 1000px;
+}
+
+.content_banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.botoes_banner{
+    display: flex;
+    gap: 15px;
+    margin-top: 2%;
+}
+
+#chamar{
+    padding: 10px 60px;
+    border: none;
+    width: 500px;
+    border-radius: 10px;
+    background-color: var(--laranja-destaque);
+    color: var(--vinho);
+    font-size: 28px;
+}
+
+#chamar:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#ver_cardapio{
+    padding: 20px;
+    width: 500px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--vinho);
+    color: var(--laranja-destaque);
+    font-size: 28px;
+}
+
+#ver_cardapio:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.destaques{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fundo-escuro);
+    width: 100%;
+    height: 100vh;
+}
+
+.content_destaques{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    height: 500px;
+    width: 50%;
+}
+
+.direita{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#pedidos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image:url("/imgs/mais_pedidos.png");
+    background-size: cover;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    color: white;
+}
+
+.bacon{
+    background-image:url("/imgs/muito_bacon.png");
+    background-size: cover;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.combos{
+    background-image:url("/imgs/super_combos.png");
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+#texto{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+
+}
+
+#texto_grande{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.card_destaque:hover{
+    opacity: 0.8;
+}
+
+@keyframes myMove {
+    from {top: 300px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
+}
+
+#hamburgueres{
+    animation: myMove 1.5s;
+    position: relative;
+}
+
+.unidades{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    background-image: url("/imgs/unidade.jpeg");
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    gap: 30px;
+    color: white;
+}
+
+.texto_unidades{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titulo_unidades{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.lista_unidades{
+    font-size: 25px;
+    font-weight: 300;
+}
