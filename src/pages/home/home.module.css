@@ -10,12 +10,19 @@
 
 .banner h1 {
     color: var(--laranja-destaque);
-    font-size: 80px;
+    font-size: 5rem;
     font-weight: 500;
     margin-bottom: 2%;
 }
 
-#hamburgueres {
+@keyframes myMove {
+    from {top: 300px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
+}
+
+#hamburgueres{
+    animation: myMove 1.5s;
+    position: relative;
     width: 1000px;
 }
 
@@ -40,7 +47,7 @@
     border-radius: 10px;
     background-color: var(--laranja-destaque);
     color: var(--vinho);
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 #chamar:hover{
@@ -55,13 +62,40 @@
     border-radius: 10px;
     background-color: var(--vinho);
     color: var(--laranja-destaque);
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 #ver_cardapio:hover{
     opacity: 0.8;
     cursor: pointer;
 }
+
+
+/*FIM BANNER*/
+
+
+.cardapio{
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo_cardapio{
+    text-align: center;
+    font-size: 6.3rem;
+    font-weight: 500;
+    color: var(--laranja-destaque);
+    margin-bottom: 5%;
+}
+
+
+
+/*FIM CARDAPIOS*/
+
 
 .destaques{
     display: flex;
@@ -140,14 +174,14 @@
 #texto{
     margin-right: 10px;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 1.7rem;
 
 }
 
 #texto_grande{
     margin-right: 10px;
     margin-left: 10px;
-    font-size: 50px;
+    font-size: 3.125rem;
     font-weight: 500;
 }
 
@@ -155,15 +189,11 @@
     opacity: 0.8;
 }
 
-@keyframes myMove {
-    from {top: 300px; opacity: 0;}
-    to {top: 0px; opacity: 1;}
-}
 
-#hamburgueres{
-    animation: myMove 1.5s;
-    position: relative;
-}
+
+/*FIM DESTAQUES*/
+
+
 
 .unidades{
     display: flex;
@@ -188,11 +218,11 @@
 }
 
 .titulo_unidades{
-    font-size: 50px;
+    font-size: 3.125rem;
     font-weight: 600;
 }
 
 .lista_unidades{
-    font-size: 25px;
+    font-size: 1.563rem;
     font-weight: 300;
 }

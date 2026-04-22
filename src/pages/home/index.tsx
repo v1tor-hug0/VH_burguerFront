@@ -2,6 +2,7 @@ import {AppProps} from "next/app";
 import Header from "@/Components/header/header";
 import Footer from "@/Components/footer/footer";
 import styles from "./home.module.css"
+import ListaProduto from "@/Components/lista-produto/lista-produto";
 
 const Home = () => {
     return (
@@ -49,9 +50,11 @@ const Home = () => {
                 </section>
 
 
-                <section id={styles.cardapio}>
-                    <h2>Cardapio</h2>
-                    {/*Chamar componente da lista*/}
+                <section className={`${styles.cardapio} layout_guide`}>
+
+                        <h2 className={styles.titulo_cardapio}>Cardapio</h2>
+                        <ListaProduto></ListaProduto>
+
                 </section>
 
 
