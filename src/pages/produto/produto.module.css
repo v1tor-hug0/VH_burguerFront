@@ -1,0 +1,99 @@
+.produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-color: var(--fundo-claro);
+}
+
+.container_produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    gap: 20px;
+}
+
+.container_produto h1 {
+    font-size: 4.375rem;
+    color: var(--laranja-destaque);
+    margin-top: 15px;
+}
+
+.campo_inputs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.inputs{
+    width: 100%;
+}
+
+.campo_inputs label{
+    font-weight: 400;
+    align-self: flex-start;
+    margin-top: 25px;
+    font-size: 1.1rem;
+}
+
+#descricao textarea{
+    height: 100px;
+}
+
+.campo_inputs input, .campo_inputs textarea, .campo_inputs select {
+    height: 52px;
+    padding: 12px;
+    border: 1px solid rgba(0,0,0, 0.1);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 6px 14px rgb(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.adicionar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.adicionar a{
+    color: var(--vinho);
+    font-weight: 500;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.botoes button{
+    padding: 10px;
+    width: 50%;
+    border: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.button_add{
+    background-color: var(--vinho);
+    color: var(--laranja-destaque);
+}
+
+.button_save{
+    background-color: var(--laranja-destaque);
+    color: var(--vinho);
+}

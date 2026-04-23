@@ -1,4 +1,5 @@
 import styles from "./header.module.css"
+import Link from "next/link";
 
 const Header = () => {
     return (
@@ -10,10 +11,10 @@ const Header = () => {
                          alt="Logo do vh burguer que contem como plano de fundo um hamburguer" id={styles.logo}/>
 
                     <nav id={styles.nav_menu}>
-                        <a href="">Destaques</a>
-                        <a href="">Cardápio</a>
-                        <a href="">Unidades</a>
-                        <a href="">Login</a>
+                        <a href="#destaques">Destaques</a>
+                        <a href="#cardapio">Cardápio</a>
+                        <a href="#unidades">Unidades</a>
+                        <Link href="/login">Login</Link>
                     </nav>
 
                     <button id={styles.btn_icon}>

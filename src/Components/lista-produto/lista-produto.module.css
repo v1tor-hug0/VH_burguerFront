@@ -33,7 +33,7 @@
     gap: 20px;
 }
 
-.botao button{
+.botao_lista{
     padding: 10px 40px;
     border: none;
     width: 400px;
@@ -41,19 +41,43 @@
     background-color: var(--laranja-destaque);
     color: var(--vinho);
     font-size: 28px;
+    text-decoration: none;
+    text-align: center;
+
 }
 
 .container_cards{
-    display: flex;
-    flex-direction: column;
-    gap: 4%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
     width: 80%;
+    height: 100%;
 }
 
-.cards{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    gap: 4%;
+
+@media (max-width: 750px){
+    .container_cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .botao{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px){
+    .container_cards{
+        grid-template-columns: 1fr;
+    }
+
+    .botoes{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .botao_lista{
+        width: 200px;
+        font-size: 20px;
+        padding: 7px;
+    }
 }

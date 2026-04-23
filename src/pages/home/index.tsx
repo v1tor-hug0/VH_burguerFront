@@ -26,7 +26,7 @@ const Home = () => {
 
                 </section>
 
-                <section className={`${styles.destaques} layout_guide`}>
+                <section className={`${styles.destaques} layout_guide`} id="destaques">
                     <div className={styles.content_destaques}>
                         <div className={`${styles.direita} ${styles.card_destaque}`}>
                             <div id={styles.pedidos}>
@@ -50,7 +50,7 @@ const Home = () => {
                 </section>
 
 
-                <section className={`${styles.cardapio} layout_guide`}>
+                <section className={`${styles.cardapio} layout_guide`} id="cardapio">
 
                         <h2 className={styles.titulo_cardapio}>Cardapio</h2>
                         <ListaProduto></ListaProduto>
@@ -58,7 +58,7 @@ const Home = () => {
                 </section>
 
 
-                <section className={`${styles.unidades} layout_guide`}>
+                <section className={`${styles.unidades} layout_guide`} id="unidades">
                     <div className={styles.texto_unidades}>
                         <h3 className={styles.titulo_unidades}>Nossas unidades</h3>
                         <ul className={styles.lista_unidades}>
