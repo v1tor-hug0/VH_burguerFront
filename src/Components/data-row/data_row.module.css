@@ -1,0 +1,11 @@
+.row{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 1.2rem;
+    min-height: 5.6rem;
+    padding: 0 2rem;
+    width: 100%;
+    font-size: 1.5rem
+}

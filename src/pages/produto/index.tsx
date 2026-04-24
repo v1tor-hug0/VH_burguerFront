@@ -32,7 +32,7 @@ const Produto = () => {
                         </select>
                     </div>
                         <div className={styles.adicionar}>
-                    <a href="">Adicionar categoria</a>
+                    <Link href="/categoria" className={styles.link_categoria}>Adicionar categoria</Link>
                         </div>
                     <div className={styles.inputs}>
                         <label htmlFor="url">URL da imagem</label>
@@ -40,7 +40,6 @@ const Produto = () => {
                     </div>
 
                         <div className={styles.botoes}>
-                            <button className={styles.button_add}>Adicionar Produto</button>
                             <button className={styles.button_save}>Salvar</button>
                         </div>
                     </form>
