@@ -55,7 +55,7 @@
 }
 
 
-@media (max-width: 750px){
+@media (max-width: 1000px){
     .container_cards{
         grid-template-columns: 1fr 1fr;
     }

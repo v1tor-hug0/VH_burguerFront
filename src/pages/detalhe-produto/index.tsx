@@ -9,7 +9,9 @@ const detalheProduto = () => {
             <SubHeader></SubHeader>
             <article className={styles.background}>
                 <div className={styles.container}>
+                    <div className={styles.titulo}>
                     <h2>Detalhes do X-Bacon</h2>
+                    </div>
                     <div className={styles.imagem}>
                         <img src="/imgs/HamburguerAlcatraComBacon_1-scaled%201.png" alt=""/>
                     </div>

@@ -9,3 +9,32 @@
     width: 100%;
     font-size: 1.5rem
 }
+
+
+@media (max-width: 900px)
+{
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 1.8rem 1.6rem;
+        border-radius: 1.2rem;
+        background-color: #ffffff;
+    }
+
+    .row p {
+        display: grid;
+        grid-template-columns: 9rem 1fr;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    .row p::before{
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--vinho);
+}
+
+}   

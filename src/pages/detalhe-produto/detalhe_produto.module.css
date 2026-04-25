@@ -8,7 +8,7 @@
 
 .container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     background-color: white;
@@ -19,11 +19,14 @@
     gap: 20px;
 }
 
-.container h2{
-    margin-top: 10px;
+.titulo{
+    width: 100%;
+    height: 10%;
+    background-color: var(--vinho);
     color: var(--laranja-destaque);
     text-align: center;
     font-size: 2.5rem;
+    border-radius: 15px 15px 0 0 ;
 }
 
 .imagem{
@@ -31,13 +34,14 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .imagem img{
     width: 25vw;
     height: 100%;
     border-radius: 15px;
-
 }
 
 .texts{
@@ -68,10 +72,12 @@
     align-items: center;
     flex-direction: column;
     width: 50%;
-
     text-align: center;
     gap: 20px;
+}
 
+.info_left, .info_right, .descricao h3{
+    margin-bottom: 5px;
 }
 
 .descricao{
