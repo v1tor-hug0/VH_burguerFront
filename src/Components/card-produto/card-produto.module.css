@@ -5,6 +5,7 @@
     box-shadow: 5px 6px 5px rgb(0, 0, 0, 0.2);
     border-radius: 0px 0px 10px 10px;
     margin-bottom: 5%;
+
 }
 
 .imagem{
@@ -54,4 +55,14 @@
 
 .props img {
     height: 5%;
+}
+
+@keyframes subir{
+    from {top: 20px; }
+    to {top: 0px; }
+}
+
+.container:hover{
+    transform: translateY(-10px);
+    transition: 0.3s;
 }

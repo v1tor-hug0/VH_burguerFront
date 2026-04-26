@@ -18,10 +18,6 @@ const detalheProduto = () => {
 
                     <div className={styles.texts}>
                         <div className={styles.info_left}>
-                            <div>
-                                <h3>Nome do produto</h3>
-                                <p>Monstro</p>
-                            </div>
 
                                 <div className={styles.descricao}>
                                     <h3>Descrição</h3>

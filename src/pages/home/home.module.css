@@ -21,8 +21,11 @@
     to {top: 0px; opacity: 1;}
 }
 
+
+
 #hamburgueres{
-    animation: myMove 1.5s;
+    animation: myMove 1.5s ;
+    /* animation-direction: alternate; */
     position: relative;
     width: 100%;
 }
@@ -78,7 +81,7 @@
 .cardapio{
     gap: 20px;
     width: 100%;
-    height: 180vh;
+    min-height: 90vh;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;

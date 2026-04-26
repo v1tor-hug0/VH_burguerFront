@@ -72,6 +72,10 @@
     outline: none;
 }
 
+.input_:focus{
+    border-color: var(--laranja-destaque);
+}
+
 .senha {
     display: block;
     text-align: right;
