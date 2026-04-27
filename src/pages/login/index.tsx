@@ -1,8 +1,23 @@
 import styles from './login.module.css';
-
+import {useState} from "react";
+import {login} from "../api/authService"
 
 //Estrutura PADRAO
 const Login = () => {
+
+    const[email, setEmail] = useState<string>('');
+    const[senha, setSenha] = useState<string>('');
+    function autenticar(e: React.FormEvent<HTMLFormElement>){
+        e.preventDefault();
+        try{
+            login(email, senha);
+            console.log("Logado");
+        }
+        catch(e: any){
+            alert(e.message);
+        }
+    }
+    
     return (
         <>
             <main className={styles.main}>
@@ -10,19 +25,21 @@ const Login = () => {
 
                 <div className={styles.content}>
                     <h1 className={styles.titulo}>Login</h1>
-                    <form action="" className={styles.login_form}>
+                    <form action="" className={styles.login_form} onSubmit={autenticar}>
 
-                        <div className={styles.campo_form}>
+                        <div className={styles.campo_form} >
                             <label htmlFor="email" className={styles.label_}>E-mail </label>
-                            <input type="text" name="email" placeholder="email@exemplo.com" required className={styles.input_} />
+                            <input type="text" name="email" placeholder="email@exemplo.com" required className={styles.input_}
+                                   value={email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div className={styles.campo_form}>
                             <label htmlFor="senha" className={styles.label_}>Senha </label>
-                            <input type="password" name="senha" placeholder="********" required className={styles.input_}/>
+                            <input type="password" name="senha" placeholder="********" required className={styles.input_}
+                                   value={senha} onChange={(e) => setSenha(e.target.value)}/>
                         </div>
 
                         <a href="#" className={styles.senha}> Esqueceu sua senha?</a>
-                        <button className={styles.entrar}>Entrar</button>
+                        <button type="submit" className={styles.entrar}>Entrar</button>
 
                     </form>
                 </div>
