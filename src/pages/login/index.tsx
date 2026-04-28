@@ -9,13 +9,7 @@ const Login = () => {
     const[senha, setSenha] = useState<string>('');
     function autenticar(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
-        try{
-            login(email, senha);
-            console.log("Logado");
-        }
-        catch(e: any){
-            alert(e.message);
-        }
+        login(email, senha);
     }
     
     return (
