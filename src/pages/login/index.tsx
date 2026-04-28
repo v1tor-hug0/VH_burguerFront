@@ -1,23 +1,44 @@
 import styles from './login.module.css';
 import {useState} from "react";
 import {login} from "../api/authService"
+import {useRouter} from "next/router";
+import {toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 //Estrutura PADRAO
 const Login = () => {
 
     const[email, setEmail] = useState<string>('');
     const[senha, setSenha] = useState<string>('');
-    function autenticar(e: React.FormEvent<HTMLFormElement>){
+
+    const router = useRouter();
+    const notificacao = (msg: string) => toast(msg);
+    const erro = (msg: string) => toast.error(msg);
+
+    async function autenticar(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
-        login(email, senha);
+        try {
+            const response = await login(email, senha);
+            notificacao("Login efetuado!");
+            setTimeout(() => {
+                router.push("/home");
+            }, 1500)
+
+        }
+        catch (error) {
+            erro("Email ou senha invalidos");
+        }
+
     }
     
     return (
         <>
+            <ToastContainer/>
             <main className={styles.main}>
                     <img className={styles.imagem} src="/imgs/hamburguer-login.png" alt="Imagem de um hamburguer com seus igredientes voando" />
 
                 <div className={styles.content}>
+
                     <h1 className={styles.titulo}>Login</h1>
                     <form action="" className={styles.login_form} onSubmit={autenticar}>
 

@@ -1,8 +1,8 @@
 import { api } from "./api";
 
-export async function cadastrarCategoria(nomeCategoria: string) {
+export async function cadastrarCategoria(nome: string) {
     try {
-         await api.post("Categoria", {nomeCategoria});
+         await api.post("Categoria", {nome});
          console.log("Cadastrado com sucesso");
     }
     catch (error: any) {
