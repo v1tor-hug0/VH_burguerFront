@@ -4,26 +4,36 @@ import Sub_header from "@/Components/sub-header/sub_header";
 import Footer from "@/Components/footer/footer";
 import {useState} from "react";
 import {cadastrarCategoria} from "../api/CategoriaService";
+import {toast, ToastContainer} from "react-toastify";
 
 const Categoria = () => {
 
     const[categoria, setCategoria] = useState<string>('');
 
-    function AdicionarCategoria(e: React.FormEvent<HTMLFormElement>) {
+    const notificacao = (msg: string)=> toast.success(msg);
+    const erro = (msg: string)=> toast.error(msg);
+
+    async function Cadastrar(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        cadastrarCategoria(categoria);
+        try {
+            await cadastrarCategoria(categoria);
+            notificacao("Cadastro realizado")
+        }
+        catch (error: any) {
+            erro(error.message);
+        }
     }
 
 
     return (
         <>
-
+            <ToastContainer />
             <Sub_header></Sub_header>
 
                 <article className={styles.container}>
                     <div className={styles.content}>
                         <h1>CRIAR CATEGORIA</h1>
-                        <form action="" className={styles.form_input} onSubmit={AdicionarCategoria}>
+                        <form action="" className={styles.form_input} onSubmit={Cadastrar}>
                             <div className={styles.campo_input}>
                             <label htmlFor="nome">Nome categoria</label>
                             <input type="text" placeholder="Premium" value={categoria}

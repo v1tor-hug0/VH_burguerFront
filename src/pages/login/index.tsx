@@ -12,7 +12,7 @@ const Login = () => {
     const[senha, setSenha] = useState<string>('');
 
     const router = useRouter();
-    const notificacao = (msg: string) => toast(msg);
+    const notificacao = (msg: string) => toast.success(msg);
     const erro = (msg: string) => toast.error(msg);
 
     async function autenticar(e: React.FormEvent<HTMLFormElement>){
